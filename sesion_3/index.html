@@ -6,23 +6,45 @@
 		<title>Document</title>
 	</head>
 	<body>
-		<form action="./results.html" method="POST">
+		<form action="./results.html" method="POST" id="formulario">
 			<label for="nombre">Nombre: </label>
 			<input
 				type="text"
 				id="nombre"
 				placeholder="escribe aqui tu nombre"
 				name="nombre"
+				required
+				autofocus
+				autocomplete="off"
+				aria-required="true"
+				aria-placeholder="escribe aqui tu nombre"
 			/>
 			<label for="phone">Telefono: </label>
-			<input type="number" id="phone" name="phone" />
+			<input type="number" id="phone" name="phone" autocomplete="off" />
 
 			<label for="mail">Correo: </label>
-			<input id="mail" />
+			<input
+				id="mail"
+				required
+				value="ejemplo@test.com"
+				autocomplete="off"
+			/>
 
 			<label for="comments">Comentarios: </label>
 			<textarea name="" id="comments" cols="30" rows="10"></textarea>
+
+			<label for="pass">Password</label>
+			<input type="password" required minlength="8" maxlength="12" />
+
+			<label for="null">Desactivado</label>
+			<input type="text" name="" id="" disabled />
+
+			<label for="user">Tipo de usuario</label>
+			<input type="text" readonly value="VIP" />
 		</form>
+		<button type="submit" form="formulario">Enviar datos</button>
+		<button type="reset" form="formulario">Borrar datos</button>
+		<button disabled>Desactivado</button>
 
 		<form action="">
 			<ul style="list-style: none">
@@ -36,5 +58,156 @@
 				</li>
 			</ul>
 		</form>
+
+		<form action="">
+			<fieldset>
+				<legend>Date of birth</legend>
+				<label for="day">Day</label>
+				<input type="number" />
+				<label for="month">Month</label>
+				<input type="number" name="" id="" />
+				<label for="year">Year</label>
+				<input type="number" />
+			</fieldset>
+			<button type="submit">Enviar Datos</button>
+		</form>
+
+		<form action="./results.html" method="POST">
+			<label for="">email</label>
+			<input type="email" name="" id="" />
+
+			<label for="">search</label>
+			<input type="search" />
+			<label for="">url</label>
+			<input type="url" name="" id="" />
+			<label for="">tel</label>
+			<input type="tel" />
+			<label for="">range</label>
+			<input type="range" name="" id="" />
+			<label for="">date</label>
+			<input type="date" name="" id="" />
+			<label for="">datetime</label>
+			<input type="datetime-local" name="" id="" />
+			<label for="">week</label>
+			<input type="week" name="" id="" />
+			<label for="">month</label>
+			<input type="month" />
+			<label for="">time</label>
+			<input type="time" name="" id="" />
+			<!-- <label>label for="">hidden</label> -->
+			<input type="hidden" name="tipoUsuario" id="" value="VIP" />
+			<label for="">password</label>
+			<input type="password" name="" id="" />
+			<label for="">color</label>
+			<input type="color" name="" id="" />
+			<label for="">file</label>
+			<input type="file" name="" id="" />
+
+			<button type="submit">Enviar</button>
+
+			<form action="./results.html" method="POST">
+				<fieldset>
+					<legend for="">Inputs complejos:</legend>
+					<label for="1">opcion 1</label>
+					<input type="checkbox" id="1" value="first" checked />
+					<label for="2">opcion 2</label>
+					<input type="checkbox" id="2" value="second" />
+					<label for="3">opcion 3</label>
+					<input type="checkbox" id="3" value="third" />
+					<label for="4">opcion 4</label>
+					<input type="checkbox" id="4" value="fourth" />
+					<label for="5">opcion 5</label>
+					<input type="checkbox" id="5" value="fifth" />
+
+					<br />
+					<label for="">opcion 1</label>
+					<input type="radio" name="options" value="first" checked />
+					<label for="">opcion 2</label>
+					<input type="radio" name="options" value="second" />
+					<label for="">opcion 3</label>
+					<input type="radio" name="options" value="third" />
+					<br />
+
+					<label for="">Selecciona la opción: </label>
+					<select name="" id="">
+						<option value="1">opcion 1</option>
+						<option value="2">opcion 2</option>
+						<option value="3">opcion 3</option>
+					</select>
+
+					<br />
+
+					<label for="">Selecciona tu talla: </label>
+					<select name="" id="">
+						<optgroup label="camisetas">
+							<!-- <legend>camisetas</legend> -->
+							<option value="small" selected>S</option>
+							<option value="meduim">M</option>
+							<option value="large">L</option>
+						</optgroup>
+						<optgroup label="pantalones">
+							<!-- <legend>pantalones</legend> -->
+							<option value="small">S</option>
+							<option value="meduim">M</option>
+							<option value="large">L</option>
+						</optgroup>
+					</select>
+				</fieldset>
+			</form>
+		</form>
+		<br />
+		<br />
+		<br />
+		<p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio animi
+			enim porro architecto.
+			<blockquote cite="www.forbes.com">"criptomonedas"</blockquote>
+			Dolorum, aspernatur, placeat libero magnam,
+			sunt ex molestias alias unde accusantium beatae incidunt laborum
+			necessitatibus eveniet! Delectus?
+		</p>
+
+		<pre>
+			Este       texto
+			se mos  
+			    trara     tal
+				cual
+		lo escriba
+		<strong>negr
+			
+			itas</strong>
+		</pre>
+
+		<img src="logo.png" alt="" aria-label="se muestra el logo de la empresa que es un caballo">
+
+		<section>
+			<video src="" aria-hidden="true"></video>
+		</section>
+
+		<img src="" alt="">
+
+		<nav>
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</nav>
+
+		<div></div>
+		<p></p>
+
+		<div class="ejemplo"></div>
+		<div id="important"></div>
+		<div id="1"></div>
+
+		<p class="text"></p>
+
+		<div class="mi_clase"></div>
+
+		<span class="title"></span>
+
+		<img src="" alt="">
 	</body>
 </html>
