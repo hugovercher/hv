@@ -201,4 +201,3 @@ console.log(personajeSimplificado);
 //   // let a = fin.name + " " + fin.status + " " + fin.species + " " + fin.gender;
 //   console.log(fin);
 // }
-
