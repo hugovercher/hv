@@ -42,8 +42,8 @@ function encontrarMaximoMinimo(array) {
   return [maximo, minimo];
 }
 
-const num = [1, 4, 5, 99, -60];
-const result = encontrarMaximoMinimo(num);
+let num = [1, 4, 5, 99, -60];
+let result = encontrarMaximoMinimo(num);
 console.log(result);
 
 //? Constuye una funcion que dado un array de numeros regrese un objeto con dos arreglos, en el primer arreglo se almacenaran numero pares y en el segundo numeros impares

@@ -199,3 +199,60 @@ console.log(personajeSimplificado);
 //   // let a = fin.name + " " + fin.status + " " + fin.species + " " + fin.gender;
 //   console.log(fin);
 // }
+("use strict");
+
+const textoJson =
+  '[{"nombre":"Ana","salario":3500},{"nombre":"Pedro","salario":2000},{"nombre":"Marta","salario":4000}]';
+
+const objetoJson = JSON.parse(textoJson);
+
+console.log(objetoJson);
+// //? Crea una funcion que haga una llamada usando fetch a la API de pokemon y imprima en consola un arreglo de 3 pokemones en donde
+// //? cada pokemon sea un objeto que contenga las siguientes propiedades:
+// RES = [
+//   {
+//     name: "string",
+//     abilities: [{ name: "string" }, { name: "doe" }],
+//     type: "string",
+//     stats: [{ stat: "name", value: number }], //* {stat: strength, value: 42}
+//   },
+//   {
+//     name: "string",
+//     abilities: [{ name: "string" }, { name: "doe" }],
+//     type: "string",
+//     stats: [{ stat: "name", value: number }], //* {stat: strength, value: 42}
+//   },
+//   {
+//     name: "string",
+//     abilities: [{ name: "string" }, { name: "doe" }],
+//     type: "string",
+//     stats: [{ stat: "name", value: number }], //* {stat: strength, value: 42}
+//   },
+// ];
+const URL = "https://pokeapi.co/api/v2/";
+
+const getPokemonInfo = async (name) => {
+  const res = await fetch(`${URL}pokemon/${name}`);
+  const data = await res.json();
+  console.log(data);
+};
+getPokemonInfo("pikachu");
+("use strict");
+
+function getCharacterData(id) {
+  const url = `https://rickandmortyapi.com/api/character/${id}`;
+
+  fetch(url)
+    .then((response) => response.json())
+    .then((character) => {
+      console.log("Información del personaje:", character);
+    })
+    .catch((error) => {
+      console.error("Error:", error.message);
+    });
+}
+
+// Llama a la función con el ID del personaje que deseas consultar
+getCharacterData(8);
+
+/* Reemplaza el 3 en getCharacterData(3) con el ID del personaje que deseas obtener de la API de "Rick and Morty". */
