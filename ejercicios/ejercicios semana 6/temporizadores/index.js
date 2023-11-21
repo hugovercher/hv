@@ -1,14 +1,14 @@
 "use strict";
 
-let contador = 0;
+let conta = 0;
 let interval;
 
 function incrementarContador() {
-  contador++;
+  conta++;
 }
 
 function mostrarValorContador() {
-  console.log(`Valor del contador: ${contador}`);
+  console.log(`Valor del contador: ${conta}`);
 }
 
 interval = setInterval(incrementarContador, 1000);
@@ -23,3 +23,9 @@ function detenerTemporizador(tiempo) {
 setTimeout(() => {
   detenerTemporizador(20);
 }, 20000);
+let contador = 0;
+
+do {
+  console.log("Contador: " + contador);
+  contador++;
+} while (contador < 5);

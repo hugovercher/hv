@@ -145,3 +145,36 @@ const cars = [
     model: "Uno",
   },
 ];
+// ejercicio1
+const totalAge = persons.reduce((acc, person) => acc + person.age, 0);
+console.log(totalAge);
+// ejercicio2
+const frenchAgeTotal = persons
+  .filter((person) => person.country === "FR")
+  .reduce((acc, person) => acc + person.age, 0);
+console.log(frenchAgeTotal);
+// ejercicio3
+const petNames = persons.map((person) => person.pet.name);
+console.log(petNames);
+// ejercicio4
+const catOwners = persons.filter((person) => person.pet.type === "gato");
+console.log(catOwners);
+// ejercicio5
+const spanishCars = persons
+  .filter((person) => person.country === "ES")
+  .map((person) => cars.find((car) => car.id === person.car));
+console.log(spanishCars);
+// ejercicio6
+const fordCarOwners = persons.filter((person) => {
+  const car = cars.find((car) => car.id === person.car);
+  return car && car.brand === "Ford";
+});
+console.log(fordCarOwners);
+// ejercicio7
+const personsWithCarInfo = persons.map((person) => {
+  const car = cars.find((car) => car.id === person.car);
+  return {
+    ...person,
+    car: car,
+  };
+});
